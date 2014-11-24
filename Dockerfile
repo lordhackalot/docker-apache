@@ -3,7 +3,7 @@ MAINTAINER nattapon
 
 RUN yum -y update && yum -y upgrade
 RUN yum install -y chkconfig
-RUN yum install -y httpd openssh openssh-server openssh-clients sudo passwd
+RUN yum install -y httpd php openssh openssh-server openssh-clients sudo passwd
 
 RUN useradd usera
 RUN echo centos | passwd --stdin usera 
