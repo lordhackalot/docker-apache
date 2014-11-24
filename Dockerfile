@@ -6,7 +6,7 @@ RUN yum install -y chkconfig
 RUN yum install -y httpd openssh openssh-server openssh-clients sudo passwd
 
 RUN useradd deploy
-RUN passwd -f -u deploy
+#RUN passwd -f -u deploy
 RUN echo deploy | passwd --stdin deploy
 RUN mkdir -p /home/deploy/.ssh; chown deploy /home/deploy/.ssh;chmod 700 /home/deploy/.ssh
 ADD ./authorized_keys /home/deploy/.ssh/authorized_keys
