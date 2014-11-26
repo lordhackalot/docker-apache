@@ -5,7 +5,7 @@ RUN yum -y update && yum -y upgrade
 RUN yum install -y chkconfig
 RUN yum install -y httpd php openssh openssh-server openssh-clients sudo passwd
 
-RUN useradd usera
+RUN useradd userb
 RUN echo centos | passwd --stdin usera 
 #RUN passwd -f -u deploy
 RUN useradd deploy
